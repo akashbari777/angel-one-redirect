@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angel One Redirect</title>
+</head>
+<body>
+  <h2>Angel One Login Successful</h2>
+  <p>Copy this code and paste it in your extension:</p>
+  <code id="code" style="font-size: 18px; color: green;"></code>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const authCode = urlParams.get('code');
+    document.getElementById('code').textContent = authCode || "No code found";
+  </script>
+</body>
+</html>
